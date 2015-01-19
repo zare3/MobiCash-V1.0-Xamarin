@@ -1,0 +1,35 @@
+# Version: 8.6.0.51 (dfb682f)
+# [first argument, ignore] # /Users/Home/Projects/Paymob/Coding/MobiCash/MobiCash-iOS-New-Layout/MobiCash-iOS-New-Layout/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.0.51/bin/mtouch-64 \
+	--cache \
+	/Users/Home/Projects/Paymob/Coding/MobiCash/MobiCash-iOS-New-Layout/MobiCash-iOS-New-Layout/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	--sim \
+	/Users/Home/Projects/Paymob/Coding/MobiCash/MobiCash-iOS-New-Layout/MobiCash-iOS-New-Layout/bin/iPhoneSimulator/Debug/MobiCash-iOS-New-Layout.app \
+	--executable \
+	MobiCash-iOS-New-Layout \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.1 \
+	--targetver \
+	7.0 \
+	--abi=i386 \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-r \
+	../../../../../Workspace/Xamarin/flyoutnavigation-1.5.1/lib/ios/FlyoutNavigation.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/mscorlib.dll \
+	-r \
+	../../../../../Workspace/Xamarin/flyoutnavigation-1.5.1/lib/ios/FlyoutNavigation.dll \
+	/Users/Home/Projects/Paymob/Coding/MobiCash/MobiCash-iOS-New-Layout/MobiCash-iOS-New-Layout/bin/iPhoneSimulator/Debug//MobiCash-iOS-New-Layout.exe \

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{9E1DC16C-AED9-4497-937B-769621066D2D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MobiCashiOSNewLayout</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MobiCash-iOS-New-Layout</AssemblyName>
+    <UseMSBuildEngine>True</UseMSBuildEngine>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchSdkVersion>8.1</MtouchSdkVersion>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="FlyoutNavigation">
+      <HintPath>..\..\..\..\..\Workspace\Xamarin\flyoutnavigation-1.5.1\lib\ios\FlyoutNavigation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Images\Services\Table Icons\services_table_internet_bill%401x.png" />
+    <BundleResource Include="Resources\Images\Services\Table Icons\services_table_internet_bill%402x.png" />
+    <BundleResource Include="Resources\Images\Services\Table Icons\services_table_mobile_bill%401x.png" />
+    <BundleResource Include="Resources\Images\Services\Table Icons\services_table_mobile_bill%402x.png" />
+    <BundleResource Include="Resources\Images\MainNavDrawer\main_nav_drawer%401x.png" />
+    <BundleResource Include="Resources\Images\MainNavDrawer\main_nav_drawer%402x.png" />
+    <BundleResource Include="Resources\Images\Profile\dummy_pp_v1%401x.png" />
+    <BundleResource Include="Resources\Images\Profile\profile_pic_mask%401x.png" />
+    <BundleResource Include="Resources\Images\Profile\dummy_pp_v1%402x.png" />
+    <BundleResource Include="Resources\Images\Profile\profile_pic_mask%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="MainNavController\MainNavController.cs" />
+    <Compile Include="MainNavController\MainNavController.designer.cs">
+      <DependentUpon>MainNavController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainNavController\MainNavControllerTableSource.cs" />
+    <Compile Include="MainNavController\MainNavControllerTableItem.cs" />
+    <Compile Include="MainNavController\MainNavControllerTableCell.cs" />
+    <Compile Include="ServicesView\ServicesTableSource.cs" />
+    <Compile Include="ServicesView\ServicesTableItem.cs" />
+    <Compile Include="ServicesView\ServicesTableCell.cs" />
+    <Compile Include="ServicesView\Services.cs" />
+    <Compile Include="ServicesView\Services.designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services_Bills\InternetBill.cs" />
+    <Compile Include="Services_Bills\InternetBill.designer.cs">
+      <DependentUpon>InternetBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services_Bills\BillTableItem.cs" />
+    <Compile Include="Services_Bills\BillTableCell.cs" />
+    <Compile Include="Services_Bills\BillTableSource.cs" />
+    <Compile Include="Services_Bills\MobileBill.cs" />
+    <Compile Include="Services_Bills\MobileBill.designer.cs">
+      <DependentUpon>MobileBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\Transfer.cs" />
+    <Compile Include="Transfer\Transfer.designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Request.cs" />
+    <Compile Include="Request\Request.designer.cs">
+      <DependentUpon>Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\Profile.cs" />
+    <Compile Include="Profile\Profile.designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recharge\Recharge.cs" />
+    <Compile Include="Recharge\Recharge.designer.cs">
+      <DependentUpon>Recharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recharge\RechargeTableCell.cs" />
+    <Compile Include="Recharge\RechargeTableItem.cs" />
+    <Compile Include="Recharge\RechargeTableSource.cs" />
+    <Compile Include="History\History_All.cs" />
+    <Compile Include="History\History_All.designer.cs">
+      <DependentUpon>History_All.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\History_Pending.cs" />
+    <Compile Include="History\History_Pending.designer.cs">
+      <DependentUpon>History_Pending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\History_Received.cs" />
+    <Compile Include="History\History_Received.designer.cs">
+      <DependentUpon>History_Received.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\History_Sent.cs" />
+    <Compile Include="History\History_Sent.designer.cs">
+      <DependentUpon>History_Sent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\HistoryTabBarController.cs" />
+    <Compile Include="History\HistoryTabBarController.designer.cs">
+      <DependentUpon>HistoryTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\HistoryTableItem.cs" />
+    <Compile Include="History\HistoryTableCell.cs" />
+    <Compile Include="History\HistoryTableSource.cs" />
+    <Compile Include="Contacts\Contacts.cs" />
+    <Compile Include="Contacts\Contacts.designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ContactsTableItem.cs" />
+    <Compile Include="Contacts\ContactsTableSource.cs" />
+    <Compile Include="Contacts\ContactsTableCell.cs" />
+    <Compile Include="PayBill\PayBill.cs" />
+    <Compile Include="PayBill\PayBill.designer.cs">
+      <DependentUpon>PayBill.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard.storyboard" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="MainNavController\" />
+    <Folder Include="ServicesView\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Images\MainNavDrawer\" />
+    <Folder Include="Services_Bills\" />
+    <Folder Include="Transfer\" />
+    <Folder Include="Request\" />
+    <Folder Include="Profile\" />
+    <Folder Include="Resources\Images\Profile\" />
+    <Folder Include="Recharge\" />
+    <Folder Include="History\" />
+    <Folder Include="Contacts\" />
+    <Folder Include="PayBill\" />
+  </ItemGroup>
+</Project>
