@@ -1,27 +1,26 @@
 ﻿<Properties StartupItem="MobiCash-iOS-New-Layout/MobiCash-iOS-New-Layout.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MobiCash-iOS-New-Layout/Contacts/ContactsTableCell.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="MobiCash-iOS-New-Layout/History/HistoryTableItem.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/History/HistoryTableSource.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/History/HistoryTableCell.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/MainNavController/MainNavControllerTableCell.cs" Line="1" Column="1" />
-      <File FileName="MobiCash-iOS-New-Layout/MainNavController/MainNavControllerTableSource.cs" Line="26" Column="26" />
+      <File FileName="MobiCash-iOS-New-Layout/MainNavController/MainNavControllerTableSource.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/Services_Bills/BillTableCell.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/MainNavController/MainNavController.cs" Line="1" Column="1" />
-      <File FileName="MobiCash-iOS-New-Layout/History/History_Pending.cs" Line="4" Column="4" />
+      <File FileName="MobiCash-iOS-New-Layout/History/History_Pending.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/History/History_All.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/ServicesView/ServicesTableSource.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/ServicesView/ServicesTableCell.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/ServicesView/Services.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/History/HistoryTabBarController.cs" Line="1" Column="1" />
-      <File FileName="MobiCash-iOS-New-Layout/Contacts/ContactsTableCell.cs" Line="22" Column="22" />
-      <File FileName="MobiCash-iOS-New-Layout/Contacts/ContactsTableItem.cs" Line="4" Column="4" />
-      <File FileName="MobiCash-iOS-New-Layout/Contacts/ContactsTableSource.cs" Line="30" Column="30" />
-      <File FileName="MobiCash-iOS-New-Layout/Contacts/Contacts.cs" Line="24" Column="24" />
-      <File FileName="MobiCash-iOS-New-Layout/Recharge/Recharge.cs" Line="4" Column="4" />
+      <File FileName="MobiCash-iOS-New-Layout/Contacts/ContactsTableCell.cs" Line="3" Column="3" />
+      <File FileName="MobiCash-iOS-New-Layout/Contacts/ContactsTableItem.cs" Line="1" Column="1" />
+      <File FileName="MobiCash-iOS-New-Layout/Contacts/ContactsTableSource.cs" Line="1" Column="1" />
+      <File FileName="MobiCash-iOS-New-Layout/Contacts/Contacts.cs" Line="1" Column="1" />
+      <File FileName="MobiCash-iOS-New-Layout/Recharge/Recharge.cs" Line="1" Column="1" />
       <File FileName="MobiCash-iOS-New-Layout/Transfer/Transfer.cs" Line="1" Column="1" />
-      <File FileName="../../../../../../../Library/Frameworks/Mono.framework/Versions/3.12.0/lib/mono/4.5/Microsoft.CSharp.targets" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
