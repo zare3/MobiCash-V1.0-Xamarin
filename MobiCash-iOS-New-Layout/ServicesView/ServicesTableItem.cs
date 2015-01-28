@@ -42,6 +42,7 @@ namespace MobiCashiOSNewLayout
 			this.heading = guest.heading;
 			this.imageAddress = guest.imageAddress;
 		}
+			
 
 		public void setHeading (String heading)
 		{

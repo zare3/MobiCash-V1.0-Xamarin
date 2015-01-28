@@ -143,6 +143,51 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>1606</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1606</string>
+				</array>
+				<key>message</key>
+				<string>Scene is unreachable due to lack of entry points and does not have an identifier for runtime access via -instantiateViewControllerWithIdentifier:.</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>1729</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1729</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>1899</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1899</string>
+				</array>
+				<key>message</key>
+				<string>Scene is unreachable due to lack of entry points and does not have an identifier for runtime access via -instantiateViewControllerWithIdentifier:.</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>201</key>
 		<array>
 			<dict>

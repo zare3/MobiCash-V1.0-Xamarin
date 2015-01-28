@@ -49,6 +49,12 @@
     <Reference Include="FlyoutNavigation">
       <HintPath>..\..\..\..\..\Workspace\Xamarin\flyoutnavigation-1.5.1\lib\ios\FlyoutNavigation.dll</HintPath>
     </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Net" />
+    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -62,6 +68,14 @@
     <BundleResource Include="Resources\Images\Profile\profile_pic_mask%401x.png" />
     <BundleResource Include="Resources\Images\Profile\dummy_pp_v1%402x.png" />
     <BundleResource Include="Resources\Images\Profile\profile_pic_mask%402x.png" />
+    <BundleResource Include="Resources\ChatBar.png" />
+    <BundleResource Include="Resources\green.png" />
+    <BundleResource Include="Resources\grey.png" />
+    <BundleResource Include="Resources\SendButton.png" />
+    <BundleResource Include="Resources\Images\Recents\dummy_recents_pic_1%401x.png" />
+    <BundleResource Include="Resources\Images\Recents\dummy_recents_pic_2%401x.png" />
+    <BundleResource Include="Resources\Images\Recents\recents_pic_mask%401x.png" />
+    <BundleResource Include="Resources\Images\Recents\recents_counter_img.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -148,6 +162,14 @@
     <Compile Include="PayBill\PayBill.designer.cs">
       <DependentUpon>PayBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recents\Recents.cs" />
+    <Compile Include="Recents\Recents.designer.cs">
+      <DependentUpon>Recents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recents\RecentsTableSource.cs" />
+    <Compile Include="Recents\RecentsTableItem.cs" />
+    <Compile Include="Recents\RecentsTableCell.cs" />
+    <Compile Include="Database Manager\SQLiteDatabase.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
@@ -167,5 +189,7 @@
     <Folder Include="History\" />
     <Folder Include="Contacts\" />
     <Folder Include="PayBill\" />
+    <Folder Include="Recents\" />
+    <Folder Include="Database Manager\" />
   </ItemGroup>
 </Project>

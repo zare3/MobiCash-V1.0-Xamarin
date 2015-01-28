@@ -10,7 +10,7 @@ namespace MobiCashiOSNewLayout
 		private List<string> ReceivedTableItemsRecipentsNames;
 		private List<string> ReceivedTableItemsAmounts;
 		private List<HistoryViewType> ReceivedTableItemsTypes;
-		private List<string> ReceivedTableItemsTimeStamps;
+		private List<DateTime> ReceivedTableItemsTimeStamps;
 		public History_Received (IntPtr handle) : base (handle)
 		{
 		}
@@ -61,15 +61,15 @@ namespace MobiCashiOSNewLayout
 
 		private void makeReceivedTableItemsTimeStampsReady()
 		{
-			ReceivedTableItemsTimeStamps = new List<string> ();
-			ReceivedTableItemsTimeStamps.Add ("12/5/2014");
-			ReceivedTableItemsTimeStamps.Add ("22/2/2014");
-			ReceivedTableItemsTimeStamps.Add ("18/1/2014");
+			ReceivedTableItemsTimeStamps = new List<DateTime> ();
+			ReceivedTableItemsTimeStamps.Add ( new DateTime (2015, 1, 27, 14, 34, 43) );
+			ReceivedTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
+			ReceivedTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
 
-			ReceivedTableItemsTimeStamps.Add ("12/5/2014");
-			ReceivedTableItemsTimeStamps.Add ("22/2/2014");
+			ReceivedTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
+			ReceivedTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
 
-			ReceivedTableItemsTimeStamps.Add ("18/1/2014");
+			ReceivedTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
 
 		}
 

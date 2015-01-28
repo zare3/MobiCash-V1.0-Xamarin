@@ -11,7 +11,7 @@ namespace MobiCashiOSNewLayout
 		private List<string> pendingTableItemsRecipentsNames;
 		private List<string> pendingTableItemsAmounts;
 		private List<HistoryViewType> pendingTableItemsTypes;
-		private List<string> pendingTableItemsTimeStamps;
+		private List<DateTime> pendingTableItemsTimeStamps;
 
 		public override void ViewDidAppear (bool animated)
 		{
@@ -66,10 +66,10 @@ namespace MobiCashiOSNewLayout
 
 		private void makePendingTableItemsTimeStampsReady()
 		{
-			pendingTableItemsTimeStamps = new List<string> ();
-			pendingTableItemsTimeStamps.Add ("12/5/2014");
-			pendingTableItemsTimeStamps.Add ("22/2/2014");
-			pendingTableItemsTimeStamps.Add ("18/1/2014");
+			pendingTableItemsTimeStamps = new List<DateTime> ();
+			pendingTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
+			pendingTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
+			pendingTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
 
 		}
 

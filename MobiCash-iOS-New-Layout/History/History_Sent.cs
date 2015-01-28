@@ -10,7 +10,7 @@ namespace MobiCashiOSNewLayout
 		private List<string> SentTableItemsRecipentsNames;
 		private List<string> SentTableItemsAmounts;
 		private List<HistoryViewType> SentTableItemsTypes;
-		private List<string> SentTableItemsTimeStamps;
+		private List<DateTime> SentTableItemsTimeStamps;
 		public History_Sent (IntPtr handle) : base (handle)
 		{
 		}
@@ -70,10 +70,10 @@ namespace MobiCashiOSNewLayout
 
 		private void makeSentTableItemsTimeStampsReady()
 		{
-			SentTableItemsTimeStamps = new List<string> ();
+			SentTableItemsTimeStamps = new List<DateTime> ();
 
-			SentTableItemsTimeStamps.Add ("12/5/2014");
-			SentTableItemsTimeStamps.Add ("22/2/2014");
+			SentTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
+			SentTableItemsTimeStamps.Add ( new DateTime (2015, 5, 14, 14, 34, 43) );
 
 		}
 

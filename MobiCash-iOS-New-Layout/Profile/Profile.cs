@@ -2,11 +2,15 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
 
 namespace MobiCashiOSNewLayout
 {
 	partial class Profile : UIViewController
 	{
+	
+
+
 		public Profile (IntPtr handle) : base (handle)
 		{
 		}
@@ -26,7 +30,10 @@ namespace MobiCashiOSNewLayout
 			loadProfileImage ();
 
 
+
 		}
+			
+	
 
 		private void loadProfileImage()
 		{

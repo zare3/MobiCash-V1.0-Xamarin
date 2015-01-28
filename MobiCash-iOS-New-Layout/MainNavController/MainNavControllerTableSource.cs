@@ -74,10 +74,12 @@ namespace MobiCashiOSNewLayout
 
 			else if (tableItems [indexPath.Row].getViewType() == MainNavViewType.Contacts)
 			{
-				var iPhoneAddressBook =  ABAddressBook.Create (out NSError e);
+
+				ABAddressBook.Create (out NSError e);
 				//if (e==null) throw System.Exception;
 				var authStatus = ABAddressBook.GetAuthorizationStatus();
 				if (authStatus != ABAuthorizationStatus.Authorized) {
+					ABAddressBook iPhoneAddressBook = new ABAddressBook ();
 					iPhoneAddressBook.RequestAccess (delegate(bool granted,
 						NSError error) {
 						if (granted)
@@ -101,6 +103,14 @@ namespace MobiCashiOSNewLayout
 				PayBill bills_nav_controller = parentController.Storyboard.InstantiateViewController ("PayBill") as PayBill;
 				parentController.NavigationController.PushViewController (bills_nav_controller, true);
 			}
+
+
+			else if (tableItems [indexPath.Row].getViewType() == MainNavViewType.Recents)
+			{
+				Recents recents_nav_controller = parentController.Storyboard.InstantiateViewController ("Recents") as Recents;
+				parentController.NavigationController.PushViewController (recents_nav_controller, true);
+			}
+
 			tableView.DeselectRow (indexPath, true);
 
 

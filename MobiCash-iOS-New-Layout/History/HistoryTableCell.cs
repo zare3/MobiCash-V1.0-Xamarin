@@ -1,6 +1,7 @@
 ﻿using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Drawing;
+using System;
 
 namespace MobiCashiOSNewLayout
 {
@@ -51,12 +52,12 @@ namespace MobiCashiOSNewLayout
 
 		}
 
-		public void UpdateCell (string recipent, string type, string amount, string timeStamp, HistoryViewType historyViewType)
+		public void UpdateCell (string recipent, string type, string amount, DateTime timeStamp, HistoryViewType historyViewType)
 		{
 			recipentLabel.Text = recipent;
 			typeLabel.Text = type;
 			amountLabel.Text = amount;
-			timeStampLabel.Text = timeStamp;
+			timeStampLabel.Text = timeStamp.ToString ();
 			if (historyViewType == HistoryViewType.Pending)
 				typeLabel.TextColor = UIColor.FromRGB (14, 43, 216);
 			else if (historyViewType == HistoryViewType.Sent)
@@ -70,7 +71,7 @@ namespace MobiCashiOSNewLayout
 		{
 			base.LayoutSubviews ();
 			recipentLabel.Frame = new RectangleF(30, 1, ContentView.Bounds.Width - 30, 25);
-			timeStampLabel.Frame = new RectangleF(235, 20, ContentView.Bounds.Width -30, 25);
+			timeStampLabel.Frame = new RectangleF(190, 20, ContentView.Bounds.Width -30, 25);
 
 			typeLabel.Frame = new RectangleF(30, 20, ContentView.Bounds.Width - 30, 25);
 			amountLabel.Frame = new RectangleF(235, 1, ContentView.Bounds.Width - 30, 25);

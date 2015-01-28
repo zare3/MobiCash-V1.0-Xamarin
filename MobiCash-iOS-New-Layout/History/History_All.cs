@@ -9,10 +9,9 @@ namespace MobiCashiOSNewLayout
 	{
 
 		private List<HistoryTableItem> AllTableItems;
-		private List<string> AllTableItemsRecipentsNames;
-		private List<string> AllTableItemsAmounts;
-		private List<HistoryViewType> AllTableItemsTypes;
-		private List<string> AllTableItemsTimeStamps;
+
+		SQLiteDatabase db;
+
 		public History_All (IntPtr handle) : base (handle)
 		{
 		}
@@ -32,76 +31,16 @@ namespace MobiCashiOSNewLayout
 		{
 			base.ViewDidLoad ();
 			loadViewSettings ();
-			makeAllTableItemsRecipentsNamesReady ();
-			makeAllTableItemsAmountsReady ();
-			makeAllTableItemsTypesReady ();
-			makeAllTableItemsTimeStampsReady ();
 			makeAllTableItemsReady ();
 			makeAllTableReady ();
 		}
 
-		private void makeAllTableItemsRecipentsNamesReady()
-		{
-			AllTableItemsRecipentsNames = new List<string> ();
-			AllTableItemsRecipentsNames.Add ("Borksha Zofolo");
-			AllTableItemsRecipentsNames.Add ("Konan Rafiqi");
-			AllTableItemsRecipentsNames.Add ("Lafeek Razoola");
 
-			AllTableItemsRecipentsNames.Add ("Borksha Zofolo");
-			AllTableItemsRecipentsNames.Add ("Konan Rafiqi");
-
-			AllTableItemsRecipentsNames.Add ("Lafeek Razoola");
-
-		}
-
-		private void makeAllTableItemsAmountsReady ()
-		{
-			AllTableItemsAmounts = new List<string> ();
-			AllTableItemsAmounts.Add ("50 EGP");
-			AllTableItemsAmounts.Add ("150 EGP");
-			AllTableItemsAmounts.Add ("250 EGP");
-
-			AllTableItemsAmounts.Add ("50 EGP");
-			AllTableItemsAmounts.Add ("150 EGP");
-
-			AllTableItemsAmounts.Add ("250 EGP");
-
-		}
-
-		private void makeAllTableItemsTypesReady()
-		{
-			AllTableItemsTypes = new List<HistoryViewType> ();
-			AllTableItemsTypes.Add (HistoryViewType.Pending);
-			AllTableItemsTypes.Add (HistoryViewType.Pending);
-			AllTableItemsTypes.Add (HistoryViewType.Pending);
-
-			AllTableItemsTypes.Add (HistoryViewType.Sent);
-			AllTableItemsTypes.Add (HistoryViewType.Sent);
-
-			AllTableItemsTypes.Add (HistoryViewType.Received);
-		}
-
-		private void makeAllTableItemsTimeStampsReady()
-		{
-			AllTableItemsTimeStamps = new List<string> ();
-			AllTableItemsTimeStamps.Add ("12/5/2014");
-			AllTableItemsTimeStamps.Add ("22/2/2014");
-			AllTableItemsTimeStamps.Add ("18/1/2014");
-
-			AllTableItemsTimeStamps.Add ("12/5/2014");
-			AllTableItemsTimeStamps.Add ("22/2/2014");
-
-			AllTableItemsTimeStamps.Add ("18/1/2014");
-
-		}
 
 		private void makeAllTableItemsReady()
 		{
-			AllTableItems = new List<HistoryTableItem> ();
-			for (int i = 0; i < AllTableItemsAmounts.Count; i++) 
-			{
-				AllTableItems.Add (new HistoryTableItem (AllTableItemsRecipentsNames [i], AllTableItemsAmounts [i], AllTableItemsTimeStamps [i], AllTableItemsTypes [i]));
-			}
+			db = new SQLiteDatabase ();
+			AllTableItems = db.getAllTransactions ();
 		}
 
 		private void makeAllTableReady ()

@@ -10,7 +10,7 @@ namespace MobiCashiOSNewLayout
 	{
 		private string recipent;
 		private string amount;
-		private string timeStamp;
+		private DateTime timeStamp;
 		private HistoryViewType historyViewType;
 		private string historyViewTypeString;
 
@@ -29,7 +29,7 @@ namespace MobiCashiOSNewLayout
 		}
 		protected UITableViewCellAccessory cellAccessory = UITableViewCellAccessory.None;
 
-		public HistoryTableItem (string recipent, string amount, string timeStamp, HistoryViewType historyViewType)
+		public HistoryTableItem (string recipent, string amount, DateTime timeStamp, HistoryViewType historyViewType)
 		{
 			this.recipent = recipent;
 			this.amount = amount;
@@ -63,7 +63,7 @@ namespace MobiCashiOSNewLayout
 			return this.amount;
 		}
 
-		public string getTimeStamp()
+		public DateTime getTimeStamp()
 		{
 			return this.timeStamp;
 		}

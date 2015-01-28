@@ -52,7 +52,7 @@ namespace MobiCashiOSNewLayout
 			{
 				string name = tableItems [indexPath.Row].getRecipent();
 				string amount = tableItems [indexPath.Row].getAmount();
-				string timeStamp = tableItems [indexPath.Row].getTimeStamp ();
+				string timeStamp = tableItems [indexPath.Row].getTimeStamp ().ToString();
 				UIAlertView confirmTopUp = new UIAlertView("Transaction Completed",
 					"You have sent to "+name+" an amount of "+amount+" on " +timeStamp,
 					null, "OK", null);
@@ -64,7 +64,7 @@ namespace MobiCashiOSNewLayout
 			{
 				string name = tableItems [indexPath.Row].getRecipent();
 				string amount = tableItems [indexPath.Row].getAmount();
-				string timeStamp = tableItems [indexPath.Row].getTimeStamp ();
+				string timeStamp = tableItems [indexPath.Row].getTimeStamp ().ToString();
 				UIAlertView confirmTopUp = new UIAlertView("Transaction Completed",
 					"You have received from "+name+" an amount of "+amount+" on " +timeStamp,
 					null, "OK", null);
@@ -94,7 +94,7 @@ namespace MobiCashiOSNewLayout
 			
 		public string GetCellName (int rowIndex)
 		{
-			return tableItems [rowIndex].getTimeStamp();
+			return tableItems [rowIndex].getTimeStamp().ToString();
 		}
 	}
 }

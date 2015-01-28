@@ -110,6 +110,14 @@ namespace MobiCashiOSNewLayout
 			};
 
 			confirmTopUp.Show();
+			/*
+
+			SQLiteDatabase w = new SQLiteDatabase ();
+
+			w.createDB();
+			w.insertDB(phoneNumber,double.Parse(amount));
+			phoneNumberTextField.Text=w.GetValues();
+			*/
 		}
 
 		public void setSwipeLeftGesture()

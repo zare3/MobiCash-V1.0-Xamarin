@@ -10,41 +10,18 @@ namespace MobiCashiOSNewLayout
 	partial class Services : UITableViewController
 	{
 		private List<ServicesTableItem> servicesTableItems;
-		private List<string> servicesTableItemsHeaders;
-		private List<string> servicesTableItemsImages;
-		private List<ServicesViewType> servicesTableItemsTypes;
+		private SQLiteDatabase db;
 	
 		public Services (IntPtr handle) : base (handle)
 		{
 		}
 
-		private void makeServicesTableItemsTypesReady()
-		{
-			servicesTableItemsTypes = new List<ServicesViewType> ();
-			servicesTableItemsTypes.Add (ServicesViewType.InternetBill);
-			servicesTableItemsTypes.Add (ServicesViewType.MobileBill);
-		}
-		private void makeServicesTableItemsHeadersReady ()
-		{
-			servicesTableItemsHeaders = new List<string> ();
-			servicesTableItemsHeaders.Add ("Internet Bill");
-			servicesTableItemsHeaders.Add ("Mobile Bill");
-		}
-
-		private void makeServicesTableItemsImagesReady()
-		{
-			servicesTableItemsImages = new List<string> ();
-			servicesTableItemsImages.Add ("Images/Services/Table Icons/services_table_internet_bill.png");
-			servicesTableItemsImages.Add ("Images/Services/Table Icons/services_table_mobile_bill.png");
-		}
 
 		private void createViewTable()
 		{
 			ServicesTable = new UITableView(UIScreen.MainScreen.Bounds);
-			servicesTableItems = new List<ServicesTableItem> ();
-			for (int i=0; i<servicesTableItemsHeaders.Count; i++)
-				servicesTableItems.Add(new ServicesTableItem (servicesTableItemsHeaders[i],servicesTableItemsImages[i],servicesTableItemsTypes[i]) );
-
+			db = new SQLiteDatabase ();
+			servicesTableItems = db.getAllServices ();
 			ServicesTable.Source = new ServicesTableSource (servicesTableItems,this);
 			Add (ServicesTable);
 
@@ -77,11 +54,6 @@ namespace MobiCashiOSNewLayout
 					})
 				, true);
 
-			/*this.NavigationItem.SetRightBarButtonItem(
-				new UIBarButtonItem(UIBarButtonSystemItem.FastForward, (sender,args) => {
-					openMainNavController();
-				})
-				, true);*/
 		}
 		public void openMainNavController()
 		{
@@ -93,9 +65,6 @@ namespace MobiCashiOSNewLayout
 		{
 			base.ViewDidLoad ();
 			loadViewSettings ();
-			makeServicesTableItemsHeadersReady ();
-			makeServicesTableItemsImagesReady ();
-			makeServicesTableItemsTypesReady ();
 			createViewTable ();
 
 		}
